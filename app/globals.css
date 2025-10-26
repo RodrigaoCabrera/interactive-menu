@@ -18,8 +18,3 @@ body {
 html {
   scrollbar-gutter: stable;
 }
-
-/* View Transitions */
-@view-transition {
-  navigation: auto;
-}
