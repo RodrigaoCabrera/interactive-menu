@@ -1,9 +1,10 @@
-import { getCoffees } from './actions/coffees'
+import { getCoffees, getCategories } from './actions/coffees'
 import { Header } from '@/components/layout/header'
-import { CoffeeGrid } from '@/components/menu/coffee-grid'
+import { MenuSection } from '@/components/menu/menu-section'
 
 export default async function HomePage() {
   const coffees = await getCoffees()
+  const categories = await getCategories()
 
   return (
     <div className="min-h-screen bg-linear-to-b from-amber-50 to-white">
@@ -33,10 +34,14 @@ export default async function HomePage() {
             </div>
             <div className="text-sm text-gray-600">Featured</div>
           </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-amber-700">{categories.length}</div>
+            <div className="text-sm text-gray-600">Categorías</div>
+          </div>
         </div>
 
-        {/* Coffee Grid */}
-        <CoffeeGrid coffees={coffees} />
+        {/* Menu with Filters */}
+        <MenuSection coffees={coffees} categories={categories} />
       </main>
     </div>
   )
