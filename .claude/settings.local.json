@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/RodrigoCabrera/**)",
+      "Bash(cat \"C:\\Users\\RodrigoCabrera\\.claude\")",
+      "Bash(cat \"C:\\Users\\RodrigoCabrera\\.claude\\settings.json\")",
+      "Bash(cat \"C:\\Users\\RodrigoCabrera\\.claude.md\")",
+      "WebSearch",
+      "Bash(pnpm create:*)",
+      "Bash(pnpm init)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm dev)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(tasklist:*)",
+      "Bash(powershell \"Get-Process -Id 6636 | Select-Object ProcessName, Id, Path\")",
+      "Bash(powershell \"Stop-Process -Id 6636 -Force\")",
+      "Bash(powershell \"Get-Process -Id 1780 -ErrorAction SilentlyContinue | Stop-Process -Force\")",
+      "Bash(powershell:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
